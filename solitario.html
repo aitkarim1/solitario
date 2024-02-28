@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Solitario FP Los Enlaces</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/solitario.css">
+	</head>
+
+    <body>
+		<div class="central">
+			<!-- Título principal -->
+
+			<!--/*** !!!!!!!!!!!!!!!!!!! CÓDIGO !!!!!!!!!!!!!!!!!!!! **/
+			Rellenar h1 e insertar el logo donde proceda
+        	-->
+			<div class="head">
+				<h1 id="titulo">Juego del solitario</h1>
+				<img id="logo" src="imagenes/Logo.png" alt="logo">
+			</div>
+
+			<!-- Siguiente línea donde se indicará el tiempo transcurrido y la cantidad
+				de movimientos que se han hecho hasta el momento. Estos números se
+				indicarán en los span internos -->
+			<h2 id="marcadores">
+				<span>Tiempo: <span id="contador_tiempo">00:00:00</span></span>
+				<span style="display:inline-block; width:200px"></span>
+				<span>Movimientos: <span id="contador_movimientos" class="">0</span></span>
+			</h2>
+
+			<!-- La "mesa" contendrá los 6 tapetes. En la parte superior dos de ellos
+				y en la parte inferior los cuatro restantes. Los contadores de los
+				mazos de cartas de cada tapete están indicados oportunamente dentro
+				de elementos span -->
+			<div id="mesa">
+				<div class="tapetes_superiores">
+					<div id="inicial" class="tapete" ondrop="drop(event, 'mazo_inicial')" ondragover="allowDrop(event)"><span id="contador_inicial" class="contador"></span></div><!--
+			 --><div id="sobrantes" class="tapete" ondrop="drop(event, 'mazo_sobrantes')" ondragover="allowDrop(event)"><span id="contador_sobrantes" class="contador">0</span></div>
+				</div>
+				<div id="receptor1" class="tapete receptor" ondrop="drop(event, 'mazo_receptor1')" ondragover="allowDrop(event)"><span id="contador_receptor1" class="contador">0</span></div><!--
+		 --><div id="receptor2" class="tapete receptor" ondrop="drop(event, 'mazo_receptor2')" ondragover="allowDrop(event)"><span id="contador_receptor2" class="contador"></span></div><!--
+		 --><div id="receptor3" class="tapete receptor" ondrop="drop(event, 'mazo_receptor3')" ondragover="allowDrop(event)"><span id="contador_receptor3" class="contador"></span></div><!--
+		 --><div id="receptor4" class="tapete receptor" ondrop="drop(event, 'mazo_receptor4')" ondragover="allowDrop(event)"><span id="contador_receptor4" class="contador">0</span></div>
+			</div>
+
+			<!-- Botón de reset que reinicia todo: partida, contadores de tiempo, de movimientos, ... -->
+			<button id="reset" class="btn btn-danger">Reiniciar</button>
+		</div> <!-- class="central" -->
+
+		<script src="js/solitario.js"></script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+/**
+	Especificaciones CSS para el juego del solitario
+*/
+
+/* /*** !!!!!!!!!!!!!!!!!!! CÓDIGO !!!!!!!!!!!!!!!!!!!!
+
+**/
+div.tapete#inicial {
+	position: relative;
+}
+.carta {
+	position: absolute;
+    width: 70px;
+    height: 90px;
+}
+.central {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#logo {
+	width: 150px;
+	padding: 15px 0 0 20px;
+	text-align: center;
+}
+
+.contador {
+	position: absolute;
+	bottom: 0px;
+	right: 3px;
+}
+
+div.tapete.receptor, #sobrantes {
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.tapete.receptor img, #sobrantes img {
+    align-self: center;
+}
+
+
+/* Todos los contadores estarán ubicados en la parte inferior
+   derecha (position absolute) de los respectivos tapetes (position relative).
+*/
+body {
+	background-color: rgb(105, 99, 99);
+}
+
+/* Centrado del título y color */
+h1#titulo {
+	color: #E65014;
+	float: left;
+}
+
+/* Centrado de los marcadores de tiempo y movimientos */
+h2#marcadores{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+/* Mesa que contiene a los tapetes centrados */
+div#mesa{
+	text-align: center;
+	margin:20px;
+}
+
+/* Todos los tapetes con position relative para que
+   los respectivos mazos (arrays de <img>) puedan
+   posicionarse de manera absoluta respecto a ellos */
+div.tapete{
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+}
+
+/* Dimensiones y color de fondo para el tapete inicial */
+div.tapete#inicial{
+	width: 340px;
+	height: 340px;
+	background-color: lightgrey;
+}
+
+/* Dimensiones para todos los tapetes salvo el inicial */
+div.tapete:not(#inicial){
+	height: 125px;
+	width: 100px;
+}
+
+/* Color de fondo para el tapete de las cartas sobrantes */
+div.tapete#sobrantes{
+	background-color: lightblue;
+}
+
+/* Color de fondo de los tapetes receptores */
+div.tapete.receptor{
+	background-color: lightgreen;
+}
